@@ -1,3 +1,21 @@
+/* Scroll Progress Indicator */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    z-index: 1001;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #3498db, #f39c12);
+    width: 0%;
+    transition: width 0.1s ease;
+}
+
 /* Reset and Base Styles */
 * {
     margin: 0;
@@ -83,7 +101,7 @@ body {
     display: flex;
     align-items: center;
     padding: 100px 20px 50px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #1a44ff 0%, #ffe343 100%);
     color: white;
 }
 
@@ -98,7 +116,7 @@ body {
 }
 
 .highlight {
-    color: #f39c12;
+    color: #2fff36;
 }
 
 .hero-subtitle {

@@ -1,3 +1,21 @@
+window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY || document.documentElement.scrollTop;
+  const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrollPercent = (scrollTop / docHeight) * 100;
+  console.log('Scrolled:', scrollPercent + '%'); // <--- ตรวจสอบใน DevTools
+
+  document.querySelector('.progress-bar').style.width = scrollPercent + '%';
+});
+
+// Scroll Progress Indicator
+window.addEventListener('scroll', () => {
+    const scrollTop = window.pageYOffset;
+    const docHeight = document.body.offsetHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / docHeight) * 100;
+    
+    document.querySelector('.progress-bar').style.width = scrollPercent + '%';
+});
+
 // Mobile Navigation Toggle
 const navToggle = document.querySelector('.nav-toggle');
 const navMenu = document.querySelector('.nav-menu');
